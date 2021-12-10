@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: #FFFFFF;
+
+}
+.root, .mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+}
+h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+h5 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.logo {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.button-tela-inicio {
+    width: 345px;
+    height: 72px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+
+    border: 3px solid #FFEF61;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.window2-top {
+    width: 100vmax;
+    padding: 26px;
+    display: flex;
+}
+
+.card {
+    width: 392px;
+    height: 575.75px;
+}
+.frontcard, .backcard {
+    width: 392px;
+    height: 575.75px;
+    margin-top: 100px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+}
+.top-card {
+    display: flex;
+    justify-content: space-between;
+}
+.mid-card{
+    display: flex;
+    justify-content: center;
+}
+.bottom-card {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+.bottom-back-card {
+    display: flex;
+    justify-content: space-between;
+}
+.selecao-card {
+    width: 65px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.borda-preta {
+    border: 3px solid #000000;
+}
+.borda-verde {
+    border: 3px solid #62DB38;
+}
+.borda-vermelha {
+    border: 3px solid #F74848;
+}
+.borda-amarela {
+    border: 3px solid #FFEF61;
+}
+
+.invisivel {
+    display: none;
+}
