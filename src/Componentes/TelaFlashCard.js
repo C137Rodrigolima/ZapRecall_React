@@ -1,15 +1,13 @@
-import FlashCarddd from "./FlashCarddd";
+import FlashCard from "./FlashCard";
 
 export default function TelaFlashCard({nomeClasse}){
 
-    
-
     return (
         <div className={nomeClasse}>
-        <div className="window2-top">
-            <img className="logo-mini" src="assets/logo-mini.png" alt="aaa"/>
-        </div>
-            <FlashCarddd />
+        <header>
+            <img className="logo-mini" src="assets/logo-mini.png" alt="mini-logo"/>
+        </header>
+            <FlashCard />
         </div>
     );
 }

@@ -1,17 +1,17 @@
-export default function BottomBackCard(){
+export default function BottomBackCard({escolherResposta}){
     return(
         <div className="bottom-back-card">
             <div className="selecao-card borda-preta" onClick={() =>escolherResposta("borda-preta")}>
-                <h5>Aprendi agora</h5>
+                <div className="h7">Aprendi agora</div>
             </div>
             <div className="selecao-card borda-vermelha" onClick={() =>escolherResposta("borda-vermelha")}>
-                <h5>Não lembrei</h5>
+                <div className="h7">Não lembrei</div>
             </div>
             <div className="selecao-card borda-verde" onClick={() =>escolherResposta("borda-verde")}>
-                <h5>Lembrei com esforço</h5>
+                <div className="h7">Lembrei com esforço</div>
             </div>
             <div className="selecao-card borda-amarela" onClick={() =>escolherResposta("borda-amarela")}>
-                <h5>Zap!</h5>
+                <div className="h7">Zap!</div>
             </div>
         </div>
     );

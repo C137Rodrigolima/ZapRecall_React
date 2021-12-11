@@ -1,32 +1,46 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
-body{
-    background-color: #FFFFFF;
 
-}
 .root, .mostrar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
 h2 {
-    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
     line-height: 33px;
 }
 h4 {
-    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+h5 {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
 }
-h5 {
-    font-family: Roboto;
+h6 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+.h7 {
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -37,11 +51,15 @@ h5 {
     margin-top: 200px;
     margin-bottom: 200px;
 }
-.button-tela-inicio {
+.button-style-inicio {
     width: 345px;
     height: 72px;
 
-    font-family: Roboto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -50,21 +68,17 @@ h5 {
     color: #000000;
 
     border: 3px solid #FFEF61;
-    box-sizing: border-box;
     border-radius: 12px;
+    background-color: #FFFFFF;;
 }
 
-.window2-top {
+header {
     width: 100vmax;
     padding: 26px;
     display: flex;
 }
 
 .card {
-    width: 392px;
-    height: 575.75px;
-}
-.frontcard, .backcard {
     width: 392px;
     height: 575.75px;
     margin-top: 100px;
@@ -89,7 +103,6 @@ h5 {
 .bottom-card {
     display: flex;
     justify-content: right;
-    gap: 20px;
 }
 .bottom-back-card {
     display: flex;
@@ -117,6 +130,16 @@ h5 {
 }
 .borda-amarela {
     border: 3px solid #FFEF61;
+}
+
+.tela-final {
+    margin-top: 250px;
+    gap: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .invisivel {
