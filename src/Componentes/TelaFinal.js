@@ -1,7 +1,7 @@
 export default function TelaFinal({numerodeErros}){
 
     return(
-        numerodeErros == 0? 
+        numerodeErros === 0? 
         <div className="tela-final">
                 <h1>PARABÉNS! <img src="./assets/party.png" alt="party"/></h1>
                 <h4>Você não esqueceu de nenhum flashcard!</h4>
