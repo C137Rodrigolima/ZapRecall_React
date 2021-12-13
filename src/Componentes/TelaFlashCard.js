@@ -1,9 +1,9 @@
 import FlashCard from "./FlashCard";
 
-let escolhidoDeck;
-export default function TelaFlashCard({nomeClasse, clicadoDeck}){
+export default function TelaFlashCard({nomeClasse, deckNome}){
 
-        const react = [
+    const todosDecks = {
+        React: [
             {cardnumber: "1/8", cardpergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript"
             },
             {cardnumber: "2/8", cardpergunta: "O React é __", resposta: "uma biblioteca JavaScript para construção de interfaces"
@@ -20,27 +20,23 @@ export default function TelaFlashCard({nomeClasse, clicadoDeck}){
             },
             {cardnumber: "8/8", cardpergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
             }
-        ];
-        const javascript= [
+        ],
+        Javascript: [
             {cardnumber: "1/3", cardpergunta: "O que é Javascript?", resposta: "Resposta genérica 1"
             },
             {cardnumber: "2/3", cardpergunta: "Pergunta genérica 2", resposta: "Resposta genérica 2"
             },
             {cardnumber: "3/3", cardpergunta: "Pergutna genérica 3", resposta: "Resposta genérica 3"
             }
-        ];
-    
-        if(clicadoDeck === "javascript"){
-            escolhidoDeck = javascript;
-        } else if(clicadoDeck === "react"){
-            escolhidoDeck = react;
-        }
+        ]
+    };
+
     return (
         <div className={nomeClasse}>
         <header>
             <img className="logo-mini" src="assets/logo-mini.png" alt="mini-logo"/>
         </header>
-            <FlashCard deckEscolhido={escolhidoDeck}/>
+            <FlashCard deckEscolhido={todosDecks[deckNome]} tituloDeck={deckNome}/>
         </div>
     );
 }

@@ -7,7 +7,7 @@ import TelaFinal from "./TelaFinal";
 let respostasErradas = 0;
 let indice = 0;
 
-export default function FlashCard({deckEscolhido}){
+export default function FlashCard({deckEscolhido, tituloDeck}){
     const [valor, setValor] = useState(true);
     const [borda, setBorda] = useState("");
     const [nextValor, setNextValor] = useState(true);
@@ -35,6 +35,8 @@ export default function FlashCard({deckEscolhido}){
 
     return (
         nextScreen?
+        <>
+            <div><h2>{tituloDeck}</h2></div>
             <div className={`card ${borda}`} data-identifier="flashcard">
                 <div className="top-card">
                     <div></div>
@@ -53,6 +55,7 @@ export default function FlashCard({deckEscolhido}){
                 <BottomNextCard nextCard={nextCard}/>
                 }
             </div>
+            </>
         :
             <TelaFinal numerodeErros={respostasErradas}/>
     );
