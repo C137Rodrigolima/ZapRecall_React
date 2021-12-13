@@ -1,6 +1,6 @@
 import FlashCard from "./FlashCard";
 
-export default function TelaFlashCard({nomeClasse, deckNome}){
+export default function TelaFlashCard({nomeClasse, deckNome, zaps, retornarTelaInicial}){
 
     const todosDecks = {
         React: [
@@ -36,7 +36,7 @@ export default function TelaFlashCard({nomeClasse, deckNome}){
         <header>
             <img className="logo-mini" src="assets/logo-mini.png" alt="mini-logo"/>
         </header>
-            <FlashCard deckEscolhido={todosDecks[deckNome]} tituloDeck={deckNome}/>
+            <FlashCard deckEscolhido={todosDecks[deckNome]} tituloDeck={deckNome} zaps={zaps} retornarTelaInicial={retornarTelaInicial}/>
         </div>
     );
 }

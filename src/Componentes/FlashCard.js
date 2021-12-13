@@ -4,10 +4,10 @@ import BottomBackCard from "./BottomBackCard";
 import BottomNextCard from "./BottomNextCard";
 import TelaFinal from "./TelaFinal";
 
-let respostasErradas = 0;
+let respostasComZap = 0;
 let indice = 0;
 
-export default function FlashCard({deckEscolhido, tituloDeck}){
+export default function FlashCard({deckEscolhido, tituloDeck, zaps, retornarTelaInicial}){
     const [valor, setValor] = useState(true);
     const [borda, setBorda] = useState("");
     const [nextValor, setNextValor] = useState(true);
@@ -18,7 +18,7 @@ export default function FlashCard({deckEscolhido, tituloDeck}){
     }
     function escolherResposta(parametro){
         setBorda(parametro);
-        parametro === "borda-vermelha" && respostasErradas++;
+        parametro === "borda-amarela" && respostasComZap++;
         setNextValor(false);
     }
     function nextCard(){
@@ -32,7 +32,12 @@ export default function FlashCard({deckEscolhido, tituloDeck}){
         }
         setNextValor(true);
     }
-
+    function reiniciarRespostas(){
+        setNextScreen(true);
+        respostasComZap = 0;
+        retornarTelaInicial();
+    }
+    
     return (
         nextScreen?
         <>
@@ -44,8 +49,10 @@ export default function FlashCard({deckEscolhido, tituloDeck}){
                     <h5 data-identifier="counter">{deckEscolhido[indice].cardnumber}</h5>
                 </div>
                 <div className="mid-card">
-                    {valor? <h2>{deckEscolhido[indice].cardpergunta}</h2>
-                    : <h6>{deckEscolhido[indice].resposta}</h6>}
+                    {valor?
+                    <h2>{deckEscolhido[indice].cardpergunta}</h2>
+                    :
+                    <h6>{deckEscolhido[indice].resposta}</h6>}
                 </div>
                 { valor?
                 <BottomFrontCard virarCard={virarCard} />
@@ -57,6 +64,6 @@ export default function FlashCard({deckEscolhido, tituloDeck}){
             </div>
             </>
         :
-            <TelaFinal numerodeErros={respostasErradas}/>
+            <TelaFinal numerodeAcertos={respostasComZap} numerodeZaps = {zaps} reiniciarRespostas={reiniciarRespostas}/>
     );
 }
