@@ -5,9 +5,8 @@ import TelaFlashCard from "./TelaFlashCard";
 export default function App(){
     const [trocaClasse, setTrocaClasse] = useState("invisivel");
     const [nomeDeck, setNomeDeck] = useState("");
-    
 
-    function trocarTela(deckClicado, numeroDeck) {
+    function trocarTela(deckClicado) {
         setNomeDeck(deckClicado);
         setTrocaClasse("mostrar");
     }
